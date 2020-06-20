@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Free to play games</title>
+  </head>
+  <body>
+
+ 
+
+      <div class="mastheadP">
+        <div class="subtext">
+            <h3 class="text-center" >FREE  poker and slot casino games</h3>
+            <h3 class="text-center">BET TOTTALY FREE</h3>
+            <p class="mt-4 ">Try amazing slot machines here!</p>
+            <p > Choose between 5 different games.</p> 
+            <p class="text-center">Go and play some slots! Register with us for more slot games</p>
+
+        </div>
+
+        <div class="subtext mt-3">
+          <div class="form animeted bounce">
+
+     
+          <input id="name" placeholder="Name" class="form-control">
+                <input id="email" placeholder="Email" class="form-control mt-1">
+                <input id="subject" placeholder="Subject" class="form-control mt-1">
+                <textarea class="form-control mt-1" id="body" placeholder="Email Body"></textarea>
+                <input type="button" onclick="sendEmail()" value="Sign up with us!" class="btnn mt-4 ">
+              </div>
+        </div>
+
+      </div>
+      
+     
+    </div>
+
+    <div class="slots">
+        <div class="item i1 ">
+            <img src="slot1.png" class="img-fluid" onclick="window.location.href = 'game1.html';">
+        </div>
+        <div class="item i2 ">
+            <img src="slot2.png" class="img-fluid" onclick="window.location.href = 'game2.html';"> 
+        </div>
+        <div class="item i3">
+            <img src="slot3.png" class="img-fluid"  onclick="window.location.href = 'game3.html';">
+        </div>
+        <div class="item i4">
+            <img src="slot4.png" class="img-fluid"  onclick="window.location.href = 'game4.html';">
+        </div>
+        <div class="item i4">
+            <img src="slot5.png" class="img-fluid"  onclick="window.location.href = 'game4.html';">
+        </div>
+    </div>
+    
+    
+    
+    <div class="terms">
+        <div class="item mt-3">
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <div class="item mt-3">
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="item mt-3">
+            <a href="cookie.html">Cookie policy</a>
+        </div>
+    </div>
+
+    
+    <div class="footer text-center">
+        <div class="item">
+            <p>Our games are intended for an adult audience only.
+               
+                All games are free to play and no money is ever needed play.</p>
+        </div>
+        <div class="item">
+            <p>	&copy; 2020 bonimania.info </p>
+        </div>
+    </div>
+
+
+    <div class="cookies" id="cookies1">
+        <div class="text t1 text-center">
+          <p>This site uses cookies to provide you with a great user experience. By using bonimania.info, you accept the use of cookies.</p>
+        </div>
+        <div class="text">
+            <button id="hide"  >Accept</button>
+        </div>
+      </div>
+    
+   
+      <script type="text/javascript">
+          function sendEmail() {
+              var name = $("#name");
+              var email = $("#email");
+              var subject = $("#subject");
+              var body = $("#body");
+  
+              if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                  $.ajax({
+                     url: 'sendEmail.php',
+                     method: 'POST',
+                     dataType: 'json',
+                     data: {
+                         name: name.val(),
+                         email: email.val(),
+                         subject: subject.val(),
+                         body: body.val()
+                     }, success: function (response) {
+                          if (response.status == "success")
+                              alert('Email Has Been Sent!');
+                          else {
+                              alert('Please Try Again!');
+                              console.log(response);
+                          }
+                     }
+                  });
+              }
+          }
+  
+          function isNotEmpty(caller) {
+              if (caller.val() == "") {
+                  caller.css('border', '1px solid red');
+                  return false;
+              } else
+                  caller.css('border', '');
+  
+              return true;
+          }
+      </script> 
+      <script>
+        $(document).ready(function(){
+            
+          $("#hide").click(function(){
+          
+            $("#cookies1").hide();
+          });
+          
+        });
+        </script>
+
+     <script>
+        AOS.init();
+      </script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

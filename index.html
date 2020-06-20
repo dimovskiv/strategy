@@ -1,0 +1,198 @@
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Free to play sport games</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#terms">Terms and Conditions</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link " href="#games">Play games</a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav>
+
+ 
+      <div class="masthead">
+        
+        <div class="subtext">
+           
+            <h1 class="text-center text-white">Free 2 Play strategy games 100% free on our website</h1>
+        </div>
+        <div class="subtext mt-5">
+          <div class="form animeted bounce">
+
+     
+          <input id="name" placeholder="Name" class="form-control">
+                <input id="email" placeholder="Email" class="form-control mt-1">
+                <input id="subject" placeholder="Subject" class="form-control mt-1">
+                <textarea class="form-control mt-1" id="body" placeholder="Email Body"></textarea>
+                <input type="button" onclick="sendEmail()" value="Join us for more free games!" class="btnn  mt-4 ">
+              </div>
+        </div>
+    
+      </div>
+
+      <div class="game g1">
+        <div class="item" data-aos="fade-up">
+            <div class="subItem">
+                <img src="money.png" class="img-fluid mt-5">
+            </div>
+            <div class="subItem">
+               <p>No money needed</p>
+            </div>
+        </div>
+        <div class="item mt-5" data-aos="fade-up">
+           <div class="subItem">
+               <img src="11.png" class="img-fluid">
+           </div>
+           <div class="subItem ">
+               <p>All games are free to play</p>
+           </div>
+       </div>
+       <div class="item mt-5" data-aos="fade-up">
+           <div class="subItem">
+               <img src="basketball.png" class="img-fluid">
+           </div>
+           <div class="subItem" >
+               <p class="text-center">You can find the best free games on our website</p>
+           </div>
+       </div>
+    </div>
+      
+
+
+     <div class="framegames pt-5" id="games">
+      <h3 class="text-center">Now choose between this 4 games</h3>
+      <div class="list mt-5 text-center">
+      <ul>
+        <a href="iframe1.html"><li>Goodgame empire</li> </a>
+        <a href="iframe2.html"><li>Mighty Party</li></a>
+      <a href="iframe3.html"> <li>Battle for the galaxy</li></a> 
+      <a href="iframe4.html"> <li>Khan Wars</li> </a>  
+      </ul>
+    </div>
+    
+    
+
+
+
+     </div>
+
+    
+    
+
+     <div class="hr">
+        <hr>
+    </div>
+
+    <div class="terms" id="terms">
+        <div class="item mt-3">
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <div class="item mt-3">
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="item mt-3">
+            <a href="cookie.html">Cookie policy</a>
+        </div>
+    </div>
+
+    
+
+
+    <div class="footer text-center">
+        <div class="item">
+            <p>Our games are intended for an adult audience only.
+               
+                All games are free to play and no money is ever needed play.</p>
+        </div>
+        <div class="item">
+            <p>	&copy; 2020 bonimania.info </p>
+        </div>
+    </div>
+
+
+    <div class="cookies" id="cookies1">
+        <div class="text t1 text-center">
+          <p>This site uses cookies to provide you with a great user experience. By using bonimania.info, you accept the use of cookies.</p>
+        </div>
+        <div class="text">
+            <button id="hide"  >Accept</button>
+        </div>
+      </div>
+    
+
+      <script>
+        $(document).ready(function(){
+            
+          $("#hide").click(function(){
+          
+            $("#cookies1").hide();
+          });
+          
+        });
+        </script>
+    <script>
+        function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+
+
+
+<script>
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("cookies").hide();
+      });
+      $("#show").click(function(){
+        $("p").show();
+      });
+    });
+    </script>
+       <script>
+
+     
+        AOS.init();
+      </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
